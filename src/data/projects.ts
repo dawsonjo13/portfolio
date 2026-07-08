@@ -1,0 +1,20 @@
+export type Project = {
+  slug: string;
+  title: string;
+  description: string;
+  tech: string[];
+  repoUrl?: string;
+  liveUrl?: string;
+};
+
+export const projects: Project[] = [
+  {
+    slug: "example-project",
+    title: "Example Project",
+    description:
+      "Replace this with a real project. One or two sentences on what it does and the problem it solves.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    repoUrl: "https://github.com/your-username/example-project",
+    liveUrl: "https://example.com",
+  },
+];
