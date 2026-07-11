@@ -61,7 +61,16 @@ An array of skill categories.
 | Field | Type | Notes |
 |---|---|---|
 | `category` | string | Group heading, e.g. `"Data Analytics"` |
-| `items` | string[] | Chips shown under that heading |
+| `items` | object[] | Chips shown under that heading — each is `{ "name": string, "icon"?: string }` |
+
+Each item in `items` is an object, not a plain string:
+
+```json
+{ "name": "Python", "icon": "python" }
+{ "name": "Agile" }
+```
+
+`icon` is optional — omit it if there's no logo for that skill. Supported `icon` values (must match exactly, all lowercase): `python`, `dotnet` (ASP.NET/.NET), `laravel`, `mysql`, `jira`, `confluence`. Adding a new one requires a code change (a new icon import in `src/components/SkillsSection.tsx`), so anything outside this list should just omit `icon` and render as a plain text chip.
 
 ### projects.json
 

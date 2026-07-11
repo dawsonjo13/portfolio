@@ -1,18 +1,34 @@
 [
   {
     "category": "Project Management",
-    "items": ["Agile", "Scrum", "JIRA", "Confluence"]
+    "items": [
+      { "name": "Agile" },
+      { "name": "Scrum" },
+      { "name": "JIRA", "icon": "jira" },
+      { "name": "Confluence", "icon": "confluence" }
+    ]
   },
   {
     "category": "Software Development",
-    "items": ["ASP.NET MVC", "REST API", "Laravel", "VBA"]
+    "items": [
+      { "name": "ASP.NET MVC", "icon": "dotnet" },
+      { "name": "REST API" },
+      { "name": "Laravel", "icon": "laravel" },
+      { "name": "VBA" }
+    ]
   },
   {
     "category": "Databases",
-    "items": ["Microsoft SQL Server", "MySQL"]
+    "items": [
+      { "name": "Microsoft SQL Server" },
+      { "name": "MySQL", "icon": "mysql" }
+    ]
   },
   {
     "category": "Data Analytics",
-    "items": ["Python", "Pandas", "Power BI"]
+    "items": [
+      { "name": "Python", "icon": "python" },
+      { "name": "Power BI" }
+    ]
   }
 ]

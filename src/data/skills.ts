@@ -1,8 +1,13 @@
 import skillsJson from "@content/skills.json";
 
+export type SkillItem = {
+  name: string;
+  icon?: string;
+};
+
 export type SkillCategory = {
   category: string;
-  items: string[];
+  items: SkillItem[];
 };
 
 export const skills: SkillCategory[] = skillsJson;
