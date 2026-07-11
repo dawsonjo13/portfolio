@@ -2,11 +2,11 @@ import { profile } from "@/data/profile";
 
 const iconClass = "h-5 w-5";
 const linkClass =
-  "flex items-center gap-2 text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-50";
+  "flex items-center gap-2 rounded-full px-4 py-2 text-sm text-gray-400 transition-colors hover:bg-gray-800 hover:text-gray-50";
 
 export default function SocialLinks() {
   return (
-    <div className="flex flex-wrap gap-6 text-sm">
+    <div className="flex flex-wrap gap-1 rounded-full border border-gray-800 p-1">
       <a
         href={profile.github}
         target="_blank"

@@ -2,16 +2,16 @@ import type { Project } from "@/data/projects";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="rounded-lg border border-gray-200 p-6 dark:border-gray-800">
+    <article className="rounded-xl border border-gray-800 p-6 transition-shadow hover:shadow-md">
       <h3 className="text-lg font-semibold">{project.title}</h3>
-      <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+      <p className="mt-2 text-sm text-gray-400">
         {project.description}
       </p>
       <ul className="mt-4 flex flex-wrap gap-2">
         {project.tech.map((t) => (
           <li
             key={t}
-            className="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300"
+            className="rounded-full bg-gray-800 px-3 py-1 text-xs text-gray-300"
           >
             {t}
           </li>
@@ -23,7 +23,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-blue-600 hover:underline dark:text-blue-400"
+            className="font-medium text-blue-400 hover:underline"
           >
             Live site
           </a>
@@ -33,7 +33,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             href={project.repoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-blue-600 hover:underline dark:text-blue-400"
+            className="font-medium text-blue-400 hover:underline"
           >
             Source
           </a>

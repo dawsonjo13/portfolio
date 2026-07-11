@@ -16,7 +16,7 @@ export default function SkillsSection() {
     <div className="grid gap-6 sm:grid-cols-2">
       {skills.map((group) => (
         <div key={group.category}>
-          <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400">
+          <h3 className="inline-block border-b-2 border-blue-400 pb-1 text-sm font-semibold text-gray-300">
             {group.category}
           </h3>
           <ul className="mt-3 flex flex-wrap gap-2">
@@ -25,7 +25,7 @@ export default function SkillsSection() {
               return (
                 <li
                   key={item.name}
-                  className="flex items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300"
+                  className="flex items-center gap-1.5 rounded-lg border border-gray-800 px-3 py-1.5 text-xs text-gray-300"
                 >
                   {Icon && <Icon className="h-3.5 w-3.5" aria-hidden="true" />}
                   {item.name}

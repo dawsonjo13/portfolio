@@ -11,8 +11,7 @@ function ExperienceEntry({ item }: { item: ExperienceItem }) {
   const isCurrent = item.endDate === "Present";
 
   return (
-    <li className="relative pl-8">
-      <span className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-gray-400 dark:bg-gray-600" />
+    <li className="rounded-xl border border-gray-800 p-5 transition-shadow hover:shadow-sm">
       <div className="flex items-start gap-4">
         <Image
           src={item.logoSrc}
@@ -25,21 +24,21 @@ function ExperienceEntry({ item }: { item: ExperienceItem }) {
           <div className="flex flex-wrap items-center gap-2">
             <h3 className="font-semibold">{item.role}</h3>
             {isCurrent && (
-              <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/40 dark:text-green-400">
+              <span className="rounded-full bg-green-900/40 px-2 py-0.5 text-xs font-medium text-green-400">
                 Current
               </span>
             )}
           </div>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+          <p className="text-sm text-gray-400">
             {item.company} · {item.companyLocation}
           </p>
-          <p className="text-xs text-gray-500 dark:text-gray-500">
+          <p className="text-xs text-gray-500">
             {item.startDate} – {item.endDate}
           </p>
         </div>
       </div>
 
-      <p className="mt-3 text-sm text-gray-700 dark:text-gray-300">{item.highlight}</p>
+      <p className="mt-3 text-sm text-gray-300">{item.highlight}</p>
 
       {hasDetails && (
         <>
@@ -48,14 +47,14 @@ function ExperienceEntry({ item }: { item: ExperienceItem }) {
             aria-expanded={isOpen}
             aria-controls={detailsId}
             onClick={() => setIsOpen((prev) => !prev)}
-            className="mt-2 text-xs font-medium text-blue-600 hover:underline dark:text-blue-400"
+            className="mt-2 text-xs font-medium text-blue-400 hover:underline"
           >
             {isOpen ? "Show less" : "Show more"}
           </button>
           <ul
             id={detailsId}
             hidden={!isOpen}
-            className="mt-2 list-disc space-y-1.5 pl-5 text-sm text-gray-600 dark:text-gray-400"
+            className="mt-2 list-disc space-y-1.5 pl-5 text-sm text-gray-400"
           >
             {item.details?.map((detail, index) => (
               <li key={index} className="break-words">
@@ -71,7 +70,7 @@ function ExperienceEntry({ item }: { item: ExperienceItem }) {
 
 export default function ExperienceTimeline() {
   return (
-    <ol className="space-y-10 border-l border-gray-200 dark:border-gray-800">
+    <ol className="space-y-4">
       {experience.map((item, index) => (
         <ExperienceEntry key={`${item.company}-${item.role}-${index}`} item={item} />
       ))}
