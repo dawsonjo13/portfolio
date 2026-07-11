@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import DockNav from "@/components/DockNav";
 
 export const metadata: Metadata = {
-  title: "Resume — Your Name",
+  title: "Resume — Jovi",
 };
 
 export default function ResumePage() {
   return (
-    <div>
+    <div className="space-y-8">
+      <DockNav />
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold tracking-tight">Resume</h1>
         <a

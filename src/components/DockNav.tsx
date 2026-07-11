@@ -33,8 +33,7 @@ export default function DockNav() {
     <MotionConfig reducedMotion="user">
       <nav
         aria-label="Primary"
-        className="fixed inset-x-0 bottom-4 z-20 flex justify-center px-4"
-        style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+        className="sticky top-0 z-20 flex justify-center bg-gray-950/80 py-4 backdrop-blur"
       >
         <ul
           role="tablist"

@@ -24,22 +24,18 @@ Rules to remember:
 
 ### profile.json
 
-About tab content and contact links.
+Persistent profile header (photo/greeting/title) and the About tab's content paragraph, plus contact links.
 
 | Field | Type | Notes |
 |---|---|---|
-| `name` | string | Full name — used for page metadata, not shown as the main About headline |
-| `greeting` | string | Short semi-formal greeting shown as the About headline, e.g. `"Hi, I'm Jovi."` |
+| `name` | string | Full name — used for page metadata and image alt text, not shown as visible text |
+| `greeting` | string | Short semi-formal greeting shown in the persistent header, e.g. `"Hi, I'm Jovi."` |
 | `title` | string | Role line shown right after the greeting |
-| `location` | string | City/country shown under your title |
-| `blurb` | string | 1-2 sentence intro paragraph |
-| `wisdom` | string | A short personal quote/philosophy shown as a pull-quote on the About tab |
+| `blurb` | string | 1-2 sentence paragraph shown as the About tab's content |
 | `photoSrc` | string | Path to your photo in `public/`, e.g. `/profile.jpg` |
 | `email` | string | Used for the "Email" contact link |
 | `github` | string | Full GitHub profile URL |
 | `linkedin` | string | Full LinkedIn profile URL |
-
-> **⚠️ Review before publishing**: `wisdom` currently holds placeholder copy (marked `PLACEHOLDER —` at the start). Replace it with your own words before this goes live — it's meant to be personal, not AI-drafted.
 
 ### experience.json
 

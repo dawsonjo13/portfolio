@@ -45,7 +45,7 @@ export default function PortfolioTabs({ projects }: { projects: Project[] }) {
             hidden={!isActive}
             className={isActive ? "animate-fade-in" : undefined}
           >
-            {tab.id !== "about" && tab.id !== "contact" && (
+            {tab.id !== "contact" && (
               <h2 className="text-xl font-semibold">{tab.label}</h2>
             )}
             <div className="mt-6">{panelContent(tab.id, projects)}</div>
