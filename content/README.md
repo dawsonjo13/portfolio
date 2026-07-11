@@ -31,11 +31,26 @@ Persistent profile header (photo/greeting/title) and the About tab's content par
 | `name` | string | Full name — used for page metadata and image alt text, not shown as visible text |
 | `greeting` | string | Short semi-formal greeting shown in the persistent header, e.g. `"Hi, I'm Jovi."` |
 | `title` | string | Role line shown right after the greeting |
-| `blurb` | string | 1-2 sentence paragraph shown as the About tab's content |
+| `blurb` | object | The About tab's content — see below |
 | `photoSrc` | string | Path to your photo in `public/`, e.g. `/profile.jpg` |
 | `email` | string | Used for the "Email" contact link |
 | `github` | string | Full GitHub profile URL |
 | `linkedin` | string | Full LinkedIn profile URL |
+
+`blurb` is `{ "paragraphs": string[], "highlights": string[] }`. `paragraphs` renders as separate `<p>` tags (JSON strings can't contain real line breaks — a `\n` inside a JSON string is not rendered as a line break in HTML, so each paragraph must be its own array entry instead). The first paragraph renders, then `highlights` renders as a bullet list, then any remaining paragraphs render below it:
+
+```json
+"blurb": {
+  "paragraphs": [
+    "Opening paragraph, ends right before the bullet list.",
+    "Closing paragraph, shown after the bullets."
+  ],
+  "highlights": [
+    "First bullet point",
+    "Second bullet point"
+  ]
+}
+```
 
 ### experience.json
 

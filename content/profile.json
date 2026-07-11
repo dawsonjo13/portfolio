@@ -2,7 +2,19 @@
   "name": "Dawson Jovi Pangestu",
   "greeting": "Hi, I'm Jovi.",
   "title": "Technical Project Delivery Lead",
-  "blurb": "I turn manual, spreadsheet-driven processes into web applications and automated data pipelines — currently building enterprise systems at Mattel and a startup of my own.",
+  "blurb": {
+    "paragraphs": [
+      "I'm a Digital Transformation Officer based in Jakarta, Indonesia, with 9+ years of experience delivering digital projects in manufacturing — turning manual, spreadsheet-driven processes into scalable systems across:",
+      "I'm also a Certified ScrumMaster I (CSM I), and currently lead digital transformation initiatives at Mattel while building a startup of my own."
+    ],
+    "highlights": [
+      "Data automation with Excel & VBA",
+      "ERP implementation and support",
+      "Web development",
+      "ETL pipeline development",
+      "Data visualization & reporting"
+    ]
+  },
   "photoSrc": "/profile-placeholder.svg",
   "email": "jovipangestu@gmail.com",
   "github": "https://github.com/dawsonjo13",

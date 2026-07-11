@@ -1,10 +1,15 @@
 import profileJson from "@content/profile.json";
 
+export type Blurb = {
+  paragraphs: string[];
+  highlights: string[];
+};
+
 export type Profile = {
   name: string;
   greeting: string;
   title: string;
-  blurb: string;
+  blurb: Blurb;
   photoSrc: string;
   email: string;
   github: string;
