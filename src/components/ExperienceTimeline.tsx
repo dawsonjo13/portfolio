@@ -25,13 +25,9 @@ export default function ExperienceTimeline() {
               </p>
             </div>
           </div>
-          <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm text-gray-700 dark:text-gray-300">
-            {item.bullets.map((bullet, bulletIndex) => (
-              <li key={bulletIndex} className="break-words">
-                {bullet}
-              </li>
-            ))}
-          </ul>
+          <p className="mt-3 text-sm text-gray-700 dark:text-gray-300">
+            {item.highlight}
+          </p>
         </li>
       ))}
     </ol>
