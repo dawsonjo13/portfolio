@@ -13,7 +13,7 @@ const iconMap: Record<string, IconType> = {
 
 export default function SkillsSection() {
   return (
-    <div className="grid gap-6 sm:grid-cols-2">
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {skills.map((group) => (
         <div key={group.category}>
           <h3 className="inline-block border-b-2 border-blue-400 pb-1 text-sm font-semibold text-gray-300">

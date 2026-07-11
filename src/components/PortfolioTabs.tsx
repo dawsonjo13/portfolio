@@ -1,6 +1,7 @@
 "use client";
 
 import { TABS, useTab, type TabId } from "@/context/TabContext";
+import AboutSection from "@/components/AboutSection";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectCard from "@/components/ProjectCard";
@@ -9,6 +10,8 @@ import type { Project } from "@/data/projects";
 
 function panelContent(tabId: TabId, projects: Project[]) {
   switch (tabId) {
+    case "about":
+      return <AboutSection />;
     case "experience":
       return <ExperienceTimeline />;
     case "skills":
@@ -42,7 +45,7 @@ export default function PortfolioTabs({ projects }: { projects: Project[] }) {
             hidden={!isActive}
             className={isActive ? "animate-fade-in" : undefined}
           >
-            {tab.id !== "contact" && (
+            {tab.id !== "about" && tab.id !== "contact" && (
               <h2 className="text-xl font-semibold">{tab.label}</h2>
             )}
             <div className="mt-6">{panelContent(tab.id, projects)}</div>

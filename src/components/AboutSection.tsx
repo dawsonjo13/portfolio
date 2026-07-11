@@ -2,12 +2,9 @@ import Image from "next/image";
 import { profile } from "@/data/profile";
 import SocialLinks from "@/components/SocialLinks";
 
-export default function Hero() {
+export default function AboutSection() {
   return (
-    <section
-      id="top"
-      className="flex flex-col items-center gap-8 text-center md:flex-row md:items-center md:text-left"
-    >
+    <section className="flex flex-col items-center gap-8 text-center md:flex-row md:items-center md:text-left">
       <Image
         src={profile.photoSrc}
         alt={profile.name}
@@ -17,8 +14,8 @@ export default function Hero() {
         priority
       />
       <div className="flex flex-col items-center md:items-start">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          {profile.name}
+        <h1 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
+          {profile.greeting}
         </h1>
         <p className="mt-1 text-base font-medium text-gray-400">
           {profile.title}
@@ -27,7 +24,12 @@ export default function Hero() {
         <p className="mx-auto mt-4 max-w-xl text-gray-300 md:mx-0">
           {profile.blurb}
         </p>
-        <div className="mt-5 flex flex-wrap items-center justify-center gap-3 md:justify-start">
+        <blockquote className="mx-auto mt-6 max-w-xl border-l-2 border-blue-500/60 pl-4 text-left">
+          <p className="font-display text-lg italic text-gray-200">
+            &ldquo;{profile.wisdom}&rdquo;
+          </p>
+        </blockquote>
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3 md:justify-start">
           <SocialLinks />
           <a
             href="/resume.pdf"

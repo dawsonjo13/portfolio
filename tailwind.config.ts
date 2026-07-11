@@ -6,6 +6,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-inter)", "Helvetica Neue", "Arial", "sans-serif"],
+        display: ["var(--font-fraunces)", "Georgia", "serif"],
       },
     },
   },

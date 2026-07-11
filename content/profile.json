@@ -1,8 +1,10 @@
 {
   "name": "Dawson Jovi Pangestu",
-  "title": "Full-Stack Developer & Project Lead",
+  "greeting": "Hi, I'm Jovi.",
+  "title": "Developer and IT Project Lead",
   "location": "Depok, Indonesia",
   "blurb": "I turn manual, spreadsheet-driven processes into web applications and automated data pipelines — currently building enterprise systems at Mattel and a startup of my own.",
+  "wisdom": "PLACEHOLDER — replace with your own words: Good systems outlive good intentions — build the process, not just the fix.",
   "photoSrc": "/profile-placeholder.svg",
   "email": "jovipangestu@gmail.com",
   "github": "https://github.com/dawsonjo13",

@@ -2,9 +2,10 @@
 
 import { createContext, useContext, useMemo, useState, type ReactNode } from "react";
 
-export type TabId = "experience" | "skills" | "projects" | "contact";
+export type TabId = "about" | "experience" | "skills" | "projects" | "contact";
 
 export const TABS: { id: TabId; label: string }[] = [
+  { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
@@ -19,7 +20,7 @@ interface TabContextValue {
 const TabContext = createContext<TabContextValue | null>(null);
 
 export function TabProvider({ children }: { children: ReactNode }) {
-  const [activeTab, setActiveTab] = useState<TabId>("experience");
+  const [activeTab, setActiveTab] = useState<TabId>("about");
   const value = useMemo(() => ({ activeTab, setActiveTab }), [activeTab]);
 
   return <TabContext.Provider value={value}>{children}</TabContext.Provider>;

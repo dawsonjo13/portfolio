@@ -1,34 +1,33 @@
 [
   {
-    "category": "Project Management",
-    "items": [
-      { "name": "Agile" },
-      { "name": "Scrum" },
-      { "name": "JIRA", "icon": "jira" },
-      { "name": "Confluence", "icon": "confluence" }
-    ]
-  },
-  {
-    "category": "Software Development",
+    "category": "Technical Skills",
     "items": [
       { "name": "ASP.NET MVC", "icon": "dotnet" },
-      { "name": "REST API" },
       { "name": "Laravel", "icon": "laravel" },
-      { "name": "VBA" }
-    ]
-  },
-  {
-    "category": "Databases",
-    "items": [
+      { "name": "REST API" },
+      { "name": "VBA" },
+      { "name": "Python", "icon": "python" },
       { "name": "Microsoft SQL Server" },
       { "name": "MySQL", "icon": "mysql" }
     ]
   },
   {
-    "category": "Data Analytics",
+    "category": "Tools & Platforms",
     "items": [
-      { "name": "Python", "icon": "python" },
+      { "name": "JIRA", "icon": "jira" },
+      { "name": "Confluence", "icon": "confluence" },
       { "name": "Power BI" }
+    ]
+  },
+  {
+    "category": "Soft Skills",
+    "items": [
+      { "name": "Agile Facilitation" },
+      { "name": "Scrum" },
+      { "name": "Stakeholder Management" },
+      { "name": "Team Leadership" },
+      { "name": "Process Improvement" },
+      { "name": "Cross-functional Communication" }
     ]
   }
 ]
