@@ -1,5 +1,9 @@
 import type { IconType } from "react-icons";
 import { SiConfluence, SiDotnet, SiJira, SiLaravel, SiMysql, SiPython } from "react-icons/si";
+import { PiMicrosoftExcelLogoFill } from "react-icons/pi";
+import { AiOutlineCloudServer } from "react-icons/ai";
+import { BsFileEarmarkBarGraph } from "react-icons/bs";
+import { DiMsqlServer } from "react-icons/di";
 import { skills } from "@/data/skills";
 
 const iconMap: Record<string, IconType> = {
@@ -9,6 +13,10 @@ const iconMap: Record<string, IconType> = {
   mysql: SiMysql,
   jira: SiJira,
   confluence: SiConfluence,
+  excel: PiMicrosoftExcelLogoFill,
+  api: AiOutlineCloudServer,
+  powerbi: BsFileEarmarkBarGraph,
+  sqlserver: DiMsqlServer
 };
 
 export default function SkillsSection() {

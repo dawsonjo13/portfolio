@@ -4,10 +4,10 @@
     "items": [
       { "name": "ASP.NET MVC", "icon": "dotnet" },
       { "name": "Laravel", "icon": "laravel" },
-      { "name": "REST API" },
-      { "name": "VBA" },
+      { "name": "REST API", "icon": "api" },
+      { "name": "VBA", "icon": "excel" },
       { "name": "Python", "icon": "python" },
-      { "name": "Microsoft SQL Server" },
+      { "name": "Microsoft SQL Server", "icon": "sqlserver" },
       { "name": "MySQL", "icon": "mysql" }
     ]
   },
@@ -16,7 +16,7 @@
     "items": [
       { "name": "JIRA", "icon": "jira" },
       { "name": "Confluence", "icon": "confluence" },
-      { "name": "Power BI" }
+      { "name": "Power BI", "icon":"powerbi" }
     ]
   },
   {
