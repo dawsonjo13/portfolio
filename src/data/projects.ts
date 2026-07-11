@@ -1,3 +1,5 @@
+import projectsJson from "@content/projects.json";
+
 export type Project = {
   slug: string;
   title: string;
@@ -7,14 +9,4 @@ export type Project = {
   liveUrl?: string;
 };
 
-export const projects: Project[] = [
-  {
-    slug: "example-project",
-    title: "Example Project",
-    description:
-      "Replace this with a real project. One or two sentences on what it does and the problem it solves.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    repoUrl: "https://github.com/your-username/example-project",
-    liveUrl: "https://example.com",
-  },
-];
+export const projects: Project[] = projectsJson;
