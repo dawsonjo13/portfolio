@@ -2,14 +2,13 @@
 
 import { createContext, useContext, useMemo, useState, type ReactNode } from "react";
 
-export type TabId = "about" | "experience" | "skills" | "projects" | "contact";
+export type TabId = "about" | "experience" | "skills" | "projects";
 
 export const TABS: { id: TabId; label: string }[] = [
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
-  { id: "contact", label: "Contact" },
 ];
 
 interface TabContextValue {

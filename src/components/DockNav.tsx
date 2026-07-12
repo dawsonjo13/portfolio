@@ -3,7 +3,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { motion, MotionConfig } from "framer-motion";
 import type { IconType } from "react-icons";
-import { FiUser, FiBriefcase, FiStar, FiFolder, FiMail } from "react-icons/fi";
+import { FiUser, FiBriefcase, FiStar, FiFolder } from "react-icons/fi";
 import { TABS, useTab, type TabId } from "@/context/TabContext";
 
 const iconMap: Record<TabId, IconType> = {
@@ -11,7 +11,6 @@ const iconMap: Record<TabId, IconType> = {
   experience: FiBriefcase,
   skills: FiStar,
   projects: FiFolder,
-  contact: FiMail,
 };
 
 export default function DockNav() {
