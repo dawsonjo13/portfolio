@@ -85,7 +85,7 @@ Each item in `items` is an object, not a plain string:
 { "name": "Stakeholder Management" }
 ```
 
-`icon` is optional — omit it if there's no logo for that skill. Supported `icon` values (must match exactly, all lowercase): `python`, `dotnet` (ASP.NET/.NET), `laravel`, `mysql`, `jira`, `confluence`. Adding a new one requires a code change (a new icon import in `src/components/SkillsSection.tsx`), so anything outside this list should just omit `icon` and render as a plain text chip.
+`icon` is optional — omit it if there's no logo for that skill. Supported `icon` values (must match exactly, all lowercase): `python`, `dotnet` (ASP.NET/.NET), `laravel`, `mysql`, `jira`, `confluence`. Adding a new one requires a code change (a new icon import in `src/components/SkillsSection.tsx`), so anything outside this list should just omit `icon` and render with a generic checkmark icon instead of a brand logo.
 
 > **⚠️ Review before publishing**: the `Soft Skills` group (Stakeholder Management, Team Leadership, Agile Facilitation, Process Improvement, Cross-functional Communication) was drafted from your role title, not confirmed by you — edit the list to match skills you'd actually claim.
 
@@ -99,8 +99,11 @@ An array of project cards.
 | `title` | string | Project name |
 | `description` | string | 1-2 sentence summary |
 | `tech` | string[] | Tech stack chips |
+| `org` | string *(optional)* | Company/context label shown above the title, e.g. `"Mattel"` |
 | `repoUrl` | string *(optional)* | GitHub repo link |
 | `liveUrl` | string *(optional)* | Live demo link |
+
+If a project has neither `repoUrl` nor `liveUrl` (e.g. an internal-only tool), the card simply omits the links row instead of leaving blank space.
 
 To add a project: copy an existing entry and give it a unique `slug`.
 
