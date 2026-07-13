@@ -54,20 +54,27 @@ Persistent profile header (photo/greeting/title) and the About tab's content par
 
 ### experience.json
 
-An array of work history entries, most recent first.
+An array of company entries. Each entry represents one company and can hold multiple `positions` if you held more than one role there (most recent role first).
 
 | Field | Type | Notes |
 |---|---|---|
+| `track` | string | Either `"employment"` or `"entrepreneurship"` — controls which column the entry renders in |
 | `company` | string | Company name |
 | `companyLocation` | string | City, shown next to the company name |
 | `logoSrc` | string | Path to the company logo in `public/logos/`, e.g. `/logos/mattel.svg` |
+| `positions` | object[] | One or more roles at this company, most recent first — see below |
+
+Each item in `positions` is an object:
+
+| Field | Type | Notes |
+|---|---|---|
 | `role` | string | Job title |
 | `startDate` | string | Free text, e.g. `"2016"` or `"April 2026"` |
 | `endDate` | string | Free text, e.g. `"Present"` or `"April 2026"` |
 | `highlight` | string | One sentence shown by default — keep it short |
-| `details` | string[] *(optional)* | Extra bullet points revealed when the entry is expanded. Omit the field entirely if you don't need it |
+| `details` | string[] *(optional)* | Extra bullet points revealed when that position is expanded. Omit the field entirely if you don't need it |
 
-To add a new job: copy an existing `{ ... }` entry, add a comma after the previous entry's closing `}`, and fill in the new fields.
+To add a new job at an existing company: add another object to that company's `positions` array (most recent first). To add a new company: copy an existing top-level `{ ... }` entry, set the right `track`, and give it one `positions` entry.
 
 ### skills.json
 
@@ -76,7 +83,7 @@ An array of skill categories. The site currently uses three groups — `Technica
 | Field | Type | Notes |
 |---|---|---|
 | `category` | string | Group heading, e.g. `"Tools & Platforms"` |
-| `items` | object[] | Chips shown under that heading — each is `{ "name": string, "icon"?: string }` |
+| `items` | object[] | Chips shown under that heading — each is `{ "name": string, "icon"?: string, "featured"?: boolean }` |
 
 Each item in `items` is an object, not a plain string:
 
@@ -85,7 +92,9 @@ Each item in `items` is an object, not a plain string:
 { "name": "Stakeholder Management" }
 ```
 
-`icon` is optional — omit it if there's no logo for that skill. Supported `icon` values (must match exactly, all lowercase): `python`, `dotnet` (ASP.NET/.NET), `laravel`, `mysql`, `jira`, `confluence`. Adding a new one requires a code change (a new icon import in `src/components/SkillsSection.tsx`), so anything outside this list should just omit `icon` and render with a generic checkmark icon instead of a brand logo.
+`icon` is optional — omit it if there's no logo for that skill. Supported `icon` values (must match exactly, all lowercase): `python`, `dotnet` (ASP.NET/.NET), `laravel`, `mysql`, `jira`, `confluence`, `excel` (VBA), `api` (REST API), `powerbi`, `sqlserver` (Microsoft SQL Server). Adding a new one requires a code change (a new icon import in `src/components/SkillsSection.tsx`), so anything outside this list should just omit `icon` and render with a generic checkmark icon instead of a brand logo.
+
+`featured` is optional — set it to `true` to pull that item into the "Core Stack" row shown above the category cards, regardless of which category it belongs to. Leave it unset (or `false`) for everything that should stay in its category's regular chip list.
 
 > **⚠️ Review before publishing**: the `Soft Skills` group (Stakeholder Management, Team Leadership, Agile Facilitation, Process Improvement, Cross-functional Communication) was drafted from your role title, not confirmed by you — edit the list to match skills you'd actually claim.
 
