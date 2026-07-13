@@ -4,7 +4,7 @@ import { TABS, useTab, type TabId } from "@/context/TabContext";
 import AboutSection from "@/components/AboutSection";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import SkillsSection from "@/components/SkillsSection";
-import ProjectCard from "@/components/ProjectCard";
+import ProjectsSection from "@/components/ProjectsSection";
 import type { Project } from "@/data/projects";
 
 function panelContent(tabId: TabId, projects: Project[]) {
@@ -16,13 +16,7 @@ function panelContent(tabId: TabId, projects: Project[]) {
     case "skills":
       return <SkillsSection />;
     case "projects":
-      return (
-        <div className="grid gap-6 sm:grid-cols-2">
-          {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
-        </div>
-      );
+      return <ProjectsSection projects={projects} />;
   }
 }
 

@@ -4,6 +4,7 @@
     "title": "INSIDE - Integrated Site of Development",
     "description": "A Mattel internal web-based applications, served as single source of truth to support Dolls Product Development",
     "tech": ["ASP.NET", "SQL Server", "Bootstrap 5"],
+    "role": "programmer",
     "org": "Mattel"
   },
   {
@@ -11,6 +12,7 @@
     "title": "Planexa",
     "description": "A Mattel internal REST API system, to process and generate production schedules based on several constraints. ",
     "tech": ["FastAPI", "SQL Server", "Docker"],
+    "role": "programmer",
     "org": "Mattel"
   }
 ]

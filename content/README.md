@@ -100,7 +100,7 @@ Each item in `items` is an object, not a plain string:
 
 ### projects.json
 
-An array of project cards.
+An array of project cards, split into two tracks on the Projects tab — same idea as `experience.json`'s `track` field.
 
 | Field | Type | Notes |
 |---|---|---|
@@ -108,13 +108,14 @@ An array of project cards.
 | `title` | string | Project name |
 | `description` | string | 1-2 sentence summary |
 | `tech` | string[] | Tech stack chips |
+| `role` | string | Either `"programmer"` or `"lead"` — controls which column ("As Programmer" / "As Lead / PM") the card renders in |
 | `org` | string *(optional)* | Company/context label shown above the title, e.g. `"Mattel"` |
 | `repoUrl` | string *(optional)* | GitHub repo link |
 | `liveUrl` | string *(optional)* | Live demo link |
 
-If a project has neither `repoUrl` nor `liveUrl` (e.g. an internal-only tool), the card simply omits the links row instead of leaving blank space.
+If a project has neither `repoUrl` nor `liveUrl` (e.g. an internal-only tool), the card simply omits the links row instead of leaving blank space. A `role` with no matching projects shows "Nothing here yet." instead of an empty column.
 
-To add a project: copy an existing entry and give it a unique `slug`.
+To add a project: copy an existing entry, give it a unique `slug`, and set the right `role`.
 
 ## Images
 
