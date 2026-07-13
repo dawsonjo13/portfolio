@@ -15,7 +15,7 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
         const items = projects.filter((project) => project.role === role);
         return (
           <div key={role}>
-            <h3 className="inline-block border-b-2 border-blue-400 pb-1.5 text-base font-semibold text-gray-200">
+            <h3 className="inline-block border-b-2 border-blue-600 pb-1.5 text-base font-semibold text-slate-800 dark:border-blue-400 dark:text-gray-200">
               {ROLE_LABELS[role]}
             </h3>
             {items.length > 0 ? (
@@ -25,7 +25,7 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
                 ))}
               </div>
             ) : (
-              <p className="mt-4 text-sm text-gray-500">Nothing here yet.</p>
+              <p className="mt-4 text-sm text-slate-400 dark:text-gray-500">Nothing here yet.</p>
             )}
           </div>
         );

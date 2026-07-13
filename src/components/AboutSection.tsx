@@ -4,7 +4,7 @@ export default function AboutSection() {
   const [firstParagraph, ...restParagraphs] = profile.blurb.paragraphs;
 
   return (
-    <div className="max-w-2xl space-y-4 text-gray-300">
+    <div className="max-w-2xl space-y-4 text-slate-600 dark:text-gray-300">
       <p>{firstParagraph}</p>
       <ul className="list-disc space-y-1.5 pl-5">
         {profile.blurb.highlights.map((item) => (

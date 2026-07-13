@@ -27,15 +27,15 @@ function PositionEntry({ position }: { position: Position }) {
       <div className="flex flex-wrap items-center gap-2">
         <h4 className="font-semibold">{position.role}</h4>
         {isCurrent && (
-          <span className="rounded-full bg-green-900/40 px-2 py-0.5 text-xs font-medium text-green-400">
+          <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/40 dark:text-green-400">
             Current
           </span>
         )}
       </div>
-      <p className="text-xs text-gray-500">
+      <p className="text-xs text-slate-400 dark:text-gray-500">
         {position.startDate} – {position.endDate}
       </p>
-      <p className="mt-2 text-sm text-gray-300">{position.highlight}</p>
+      <p className="mt-2 text-sm text-slate-600 dark:text-gray-300">{position.highlight}</p>
 
       {hasDetails && (
         <>
@@ -44,14 +44,14 @@ function PositionEntry({ position }: { position: Position }) {
             aria-expanded={isOpen}
             aria-controls={detailsId}
             onClick={() => setIsOpen((prev) => !prev)}
-            className="mt-2 text-xs font-medium text-blue-400 hover:underline"
+            className="mt-2 text-xs font-medium text-blue-600 hover:underline dark:text-blue-400"
           >
             {isOpen ? "Show less" : "Show more"}
           </button>
           <ul
             id={detailsId}
             hidden={!isOpen}
-            className="mt-2 list-disc space-y-1.5 pl-5 text-sm text-gray-400"
+            className="mt-2 list-disc space-y-1.5 pl-5 text-sm text-slate-500 dark:text-gray-400"
           >
             {position.details?.map((detail, index) => (
               <li key={index} className="break-words">
@@ -67,7 +67,7 @@ function PositionEntry({ position }: { position: Position }) {
 
 function CompanyCard({ entry }: { entry: ExperienceEntry }) {
   return (
-    <li className="rounded-xl border border-gray-800 p-5 transition-shadow hover:shadow-sm">
+    <li className="rounded-xl border border-slate-200 p-5 transition-shadow hover:shadow-sm dark:border-gray-800">
       <div className="flex items-start gap-4">
         <Image
           src={entry.logoSrc}
@@ -77,12 +77,12 @@ function CompanyCard({ entry }: { entry: ExperienceEntry }) {
           className="h-10 w-10 flex-shrink-0 rounded-md object-contain grayscale"
         />
         <div className="min-w-0">
-          <p className="font-semibold text-gray-100">{entry.company}</p>
-          <p className="text-sm text-gray-400">{entry.companyLocation}</p>
+          <p className="font-semibold text-slate-900 dark:text-gray-100">{entry.company}</p>
+          <p className="text-sm text-slate-500 dark:text-gray-400">{entry.companyLocation}</p>
         </div>
       </div>
 
-      <div className="mt-4 divide-y divide-gray-800">
+      <div className="mt-4 divide-y divide-slate-200 dark:divide-gray-800">
         {entry.positions.map((position, index) => (
           <div key={`${position.role}-${index}`} className={index > 0 ? "pt-4" : "pb-4 last:pb-0"}>
             <PositionEntry position={position} />
@@ -100,7 +100,7 @@ export default function ExperienceTimeline() {
         const entries = experience.filter((entry) => entry.track === track);
         return (
           <div key={track}>
-            <h3 className="inline-block border-b-2 border-blue-400 pb-1.5 text-base font-semibold text-gray-200">
+            <h3 className="inline-block border-b-2 border-blue-600 pb-1.5 text-base font-semibold text-slate-800 dark:border-blue-400 dark:text-gray-200">
               {TRACK_LABELS[track]}
             </h3>
             {entries.length > 0 ? (
@@ -110,7 +110,7 @@ export default function ExperienceTimeline() {
                 ))}
               </ol>
             ) : (
-              <p className="mt-4 text-sm text-gray-500">Nothing here yet.</p>
+              <p className="mt-4 text-sm text-slate-400 dark:text-gray-500">Nothing here yet.</p>
             )}
           </div>
         );

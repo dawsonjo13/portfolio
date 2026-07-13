@@ -35,7 +35,7 @@ export default function SkillsSection() {
     <div className="space-y-8">
       {featuredItems.length > 0 && (
         <div>
-          <h3 className="inline-block border-b-2 border-blue-400 pb-1.5 text-base font-semibold text-gray-200">
+          <h3 className="inline-block border-b-2 border-blue-600 pb-1.5 text-base font-semibold text-slate-800 dark:border-blue-400 dark:text-gray-200">
             Core Stack
           </h3>
           <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
@@ -44,10 +44,10 @@ export default function SkillsSection() {
               return (
                 <div
                   key={item.name}
-                  className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-gray-800 bg-gray-900/60 px-4 py-6 text-center transition-all hover:-translate-y-0.5 hover:border-blue-800/60"
+                  className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-4 py-6 text-center transition-all hover:-translate-y-0.5 hover:border-blue-300 dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-blue-800/60"
                 >
-                  <Icon className="h-8 w-8 text-blue-400" aria-hidden="true" />
-                  <span className="text-sm font-medium text-gray-200">{item.name}</span>
+                  <Icon className="h-8 w-8 text-blue-600 dark:text-blue-400" aria-hidden="true" />
+                  <span className="text-sm font-medium text-slate-800 dark:text-gray-200">{item.name}</span>
                 </div>
               );
             })}
@@ -57,8 +57,8 @@ export default function SkillsSection() {
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {supportingGroups.map((group) => (
-          <div key={group.category} className="rounded-xl border border-gray-800/60 p-5">
-            <h3 className="inline-block border-b-2 border-blue-400 pb-1 text-sm font-semibold text-gray-300">
+          <div key={group.category} className="rounded-xl border border-slate-200 p-5 dark:border-gray-800/60">
+            <h3 className="inline-block border-b-2 border-blue-600 pb-1 text-sm font-semibold text-slate-700 dark:border-blue-400 dark:text-gray-300">
               {group.category}
             </h3>
             <ul className="mt-3 flex flex-wrap gap-2">
@@ -67,9 +67,9 @@ export default function SkillsSection() {
                 return (
                   <li
                     key={item.name}
-                    className="flex items-center gap-1.5 rounded-lg border border-gray-800/60 px-3 py-2 text-xs text-gray-400 transition-colors hover:border-blue-800/60 hover:text-gray-200"
+                    className="flex items-center gap-1.5 rounded-lg border border-slate-200 px-3 py-2 text-xs text-slate-500 transition-colors hover:border-blue-300 hover:text-slate-800 dark:border-gray-800/60 dark:text-gray-400 dark:hover:border-blue-800/60 dark:hover:text-gray-200"
                   >
-                    <Icon className="h-3.5 w-3.5 text-blue-400" aria-hidden="true" />
+                    <Icon className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" aria-hidden="true" />
                     {item.name}
                   </li>
                 );

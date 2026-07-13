@@ -32,11 +32,11 @@ export default function DockNav() {
     <MotionConfig reducedMotion="user">
       <nav
         aria-label="Primary"
-        className="sticky top-0 z-20 flex justify-center bg-gray-950/80 py-4 backdrop-blur"
+        className="sticky top-0 z-20 flex justify-center bg-slate-50/80 py-4 backdrop-blur dark:bg-gray-950/80"
       >
         <ul
           role="tablist"
-          className="flex items-center gap-1 rounded-full border border-gray-800 bg-gray-900/70 p-1 shadow-lg shadow-black/40 backdrop-blur"
+          className="flex items-center gap-1 rounded-full border border-slate-200 bg-white/70 p-1 shadow-lg shadow-slate-300/40 backdrop-blur dark:border-gray-800 dark:bg-gray-900/70 dark:shadow-black/40"
         >
           {TABS.map((tab) => {
             const isActive = isHome && activeTab === tab.id;
@@ -51,7 +51,9 @@ export default function DockNav() {
                   aria-controls={`panel-${tab.id}`}
                   onClick={() => handleTabClick(tab.id)}
                   className={`relative flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-2 text-sm transition-colors ${
-                    isActive ? "text-white" : "text-gray-400 hover:text-gray-50"
+                    isActive
+                      ? "text-white"
+                      : "text-slate-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-gray-50"
                   }`}
                 >
                   {isActive && (

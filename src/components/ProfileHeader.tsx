@@ -10,14 +10,14 @@ export default function ProfileHeader() {
         alt={profile.name}
         width={128}
         height={128}
-        className="h-28 w-28 flex-shrink-0 rounded-full object-cover ring-4 ring-gray-800"
+        className="h-28 w-28 flex-shrink-0 rounded-full object-cover ring-4 ring-slate-200 dark:ring-gray-800"
         priority
       />
       <div className="flex flex-col items-center md:items-start">
         <h1 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
           {profile.greeting}
         </h1>
-        <p className="mt-1 text-base font-medium text-gray-400">
+        <p className="mt-1 text-base font-medium text-slate-600 dark:text-gray-400">
           {profile.title}
         </p>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-3 md:justify-start">
