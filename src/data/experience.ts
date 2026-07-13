@@ -1,9 +1,8 @@
 import experienceJson from "@content/experience.json";
 
-export type ExperienceItem = {
-  company: string;
-  companyLocation: string;
-  logoSrc: string;
+export type ExperienceTrack = "employment" | "entrepreneurship";
+
+export type Position = {
   role: string;
   startDate: string;
   endDate: string;
@@ -11,4 +10,12 @@ export type ExperienceItem = {
   details?: string[];
 };
 
-export const experience: ExperienceItem[] = experienceJson;
+export type ExperienceEntry = {
+  track: ExperienceTrack;
+  company: string;
+  companyLocation: string;
+  logoSrc: string;
+  positions: Position[];
+};
+
+export const experience: ExperienceEntry[] = experienceJson as ExperienceEntry[];
