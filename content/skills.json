@@ -2,12 +2,12 @@
   {
     "category": "Technical Skills",
     "items": [
-      { "name": "ASP.NET MVC", "icon": "dotnet" },
-      { "name": "Laravel", "icon": "laravel" },
-      { "name": "REST API", "icon": "api" },
+      { "name": "ASP.NET MVC", "icon": "dotnet", "featured": true },
+      { "name": "Laravel", "icon": "laravel", "featured": true },
+      { "name": "REST API", "icon": "api", "featured": true },
       { "name": "VBA", "icon": "excel" },
-      { "name": "Python", "icon": "python" },
-      { "name": "Microsoft SQL Server", "icon": "sqlserver" },
+      { "name": "Python", "icon": "python", "featured": true },
+      { "name": "Microsoft SQL Server", "icon": "sqlserver", "featured": true },
       { "name": "MySQL", "icon": "mysql" }
     ]
   },
