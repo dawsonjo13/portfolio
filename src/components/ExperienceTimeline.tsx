@@ -48,17 +48,15 @@ function PositionEntry({ position }: { position: Position }) {
           >
             {isOpen ? "Show less" : "Show more"}
           </button>
-          <ul
-            id={detailsId}
-            hidden={!isOpen}
-            className="mt-2 list-disc space-y-1.5 pl-5 text-sm text-slate-500 dark:text-gray-400"
-          >
-            {position.details?.map((detail, index) => (
-              <li key={index} className="break-words">
-                {detail}
-              </li>
-            ))}
-          </ul>
+          <div id={detailsId} className={`details-collapse${isOpen ? " is-open" : ""}`}>
+            <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm text-slate-500 dark:text-gray-400">
+              {position.details?.map((detail, index) => (
+                <li key={index} className="break-words">
+                  {detail}
+                </li>
+              ))}
+            </ul>
+          </div>
         </>
       )}
     </div>
