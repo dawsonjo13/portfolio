@@ -25,7 +25,7 @@ export default function ProfileHeader() {
           <a
             href="/resume.pdf"
             download
-            className="rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-500"
+            className="rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-500 active:scale-[0.97] duration-150 motion-reduce:duration-75"
           >
             Download Resume
           </a>
